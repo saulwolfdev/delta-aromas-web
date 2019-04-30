@@ -1,0 +1,11 @@
+.Footer{
+    text-align: center;
+    background-color: var(--second-modal-color);
+    color:var(--alternate-color);
+    @include media-queries(medium){
+        display:none;
+    }
+    @include media-queries(large){
+        display:block;
+    }
+}

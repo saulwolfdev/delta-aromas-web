@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Roda de Bara, Cataluña, España aprenderaprogramar.com</title>
+	<style type="text/css">
+	body{
+		background: black;
+	}
+	h1{
+		color: white;
+		text-align: center;
+	}
+	p{
+		color: white;
+		font-size: 1.5em;
+	}
+	#lienzoMapa{
+		width: 800px;
+		height: 600px;
+		margin: 0 auto;
+		border: 5px solid;
+	}
+	.bandera{
+		cursor: pointer;
+	}
+	#pieDePagina{
+		position: absolute; 
+		right: 20px;
+	}
+	</style>
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+	<script type="text/javascript">
+		
+		var map;
+
+	function initialize(){
+		var mapOptions = {
+			mapTypeId: google.maps.MapTypeId.SATELLITE,
+			zoom: 18,
+			center: new google.maps.LatLng(41.168607, 1.481075),
+			
+		};
+		map = new google.maps.Map(document.getElementById('lienzoMapa'),
+			mapOptions);
+	}
+
+	google.maps.event.addDomListener(window,'load',initialize);
+
+	var urlCambiada = false;
+
+	function cambiarLengua(nodoImg){
+		var parrafo1 = document.getElementById('parrafo1');
+		var parrafo2 = document.getElementById('parrafo2');
+		var mapa = document.getElementById('mapa');
+		var piePagina = document.getElementById('pieDePagina');
+		mapa.innerHTML = "Mapa de Roc de Sant Gaieta";
+		if(!urlCambiada){
+			nodoImg.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Flag_of_Catalonia.svg/50px-Flag_of_Catalonia.svg.png";
+			urlCambiada = true;
+			parrafo1.innerHTML = "Es una pintoresca urganización construida entre los años 1964 y 1972, promovida por Gaietà Bori Tallada, René Vandemeuter y Pere Sureda. Diseñaron una especie de pueblo de pescadores con edificios ornamentados siguiendo estilos arquitectónicos antiguos (románicos, gótico, mudejar) o imitando rincones típicos de distantas zonas de España o de Europa (patios anduluces, hórreos gallegos, casas sardas...). Hay también muchos elementos recuperados de antiguas masias y casas abandonadas.";
+			parrafo2.innerHTML = "El conjunto recuerda el estilo del <a href='https://www.poble-espanyol.com/es'>Poble Espanol</a>. Así mismo, constituye un lugar de gran interés turístico, agradable y sorpendente, mucho más interesante que la gran parte de las urbanitzaciones convencionales que invaden la costa catalana.";
+			piePagina.id = "pieDePagina";
+			piePagina.innerHTML = "<div><p>Para más información: <a href='http://www.poblesdecatalunya.cat/element.php?e=2638'>www.poblesdecatalunya.cat</a></p></div>";
+		}else{
+			nodoImg.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Flag_of_Spain_%28Civil%29.svg/200px-Flag_of_Spain_%28Civil%29.svg.png";
+			urlCambiada = false;
+			parrafo1.innerHTML = "És una pintoresca urbanització construïda entre els anys 1964 i 1972, promoguda per Gaietà Bori Tallada, René Vandemeuter i Pere Sureda. Van dissenyar una mena de poblet de pescadors amb edificis ornamentats seguint estils arquitectònics antics (romànic, gòtic, mudèjar) o imitant racons típics de diverses zones d'Espanya o d'Europa (patis andalusos, hórreos gallecs, cases sardes...). Hi ha també molts elements recuperats d'antigues masies i cases abandonades.";
+			parrafo2.innerHTML = "El conjunt, a l'estil del Poble Espanyol, ha estat qualificat sovint com a pastitxo i desacreditat des del punt de vista arquitectònic. Tanmateix, constitueix un lloc de gran interès turístic, agradable i sorprenent, força més interessant que la major part d'urbanitzacions convencionals que envaeixen la costa catalana";
+			piePagina.id = "pieDePagina";
+			piePagina.innerHTML = "<div><p>Pеr a més informació: <a href='http://www.poblesdecatalunya.cat/element.php?e=2638'>www.poblesdecatalunya.cat</a></p></div>";
+		};
+	}
+
+	function bulgaro(){
+		var parrafo1 = document.getElementById('parrafo1');
+		var parrafo2 = document.getElementById('parrafo2');
+		var mapa = document.getElementById('mapa');
+		var piePagina = document.getElementById('pieDePagina');
+		parrafo1.innerHTML = "Живописно курортно селце пострoено между 1964 и 1972 година, по идеята на  Gaietà Bori Tallada, René Vandemeuter y Pere Sureda. Дизайн на едно рибарско село с украсени cгради, следвайки аpхитектични антични стилове (римски, готични, mudejar), и също тaка, възпроизвеждайки типични кътчета от Испания и Европа (андалусийски дворове, къщи от Галисия и Серденя...). Също може да откриете много реставрирани елементи от антични къщи и вили.";
+		parrafo2.innerHTML = "Комплексът напомня на <a href='https://www.poble-espanyol.com/es'>Poble Espanol</a>. Също тaка мястото е от голям туристически интерес, приятно и учудващо, много по-интересно от по голямата част от курорти на Каталyнското крайбрежие.";
+		mapa.innerHTML = "Карта на Roc de Sant Gaieta";
+		piePagina.id = "pieDePagina";
+		piePagina.innerHTML = "<div><p>За повече информация: <a href='http://www.poblesdecatalunya.cat/element.php?e=2638'>www.poblesdecatalunya.cat</a></p></div>";
+	}
+
+	</script>
+</head>
+<body>
+	<div id="contenedor">
+		<h1>Visita Roc de Sant Gaieta<img class="bandera" onclick="bulgaro();" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Flag_of_Bulgaria.svg/200px-Flag_of_Bulgaria.svg.png" alt="" style="position: absolute; right: 55px; top: 40px;" height="20"><img class="bandera" onclick="cambiarLengua(this);" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Flag_of_Spain_%28Civil%29.svg/200px-Flag_of_Spain_%28Civil%29.svg.png" alt="" style="position: absolute; right: 15px; top: 40px;" height="20"></h1><hr>
+		<p id="parrafo1">És una pintoresca urbanització construïda entre els anys 1964 i 1972, promoguda per Gaietà Bori Tallada, René Vandemeuter i Pere Sureda. Van dissenyar una mena de poblet de pescadors amb edificis ornamentats seguint estils arquitectònics antics (romànic, gòtic, mudèjar) o imitant racons típics de diverses zones d'Espanya o d'Europa (patis andalusos, hórreos gallecs, cases sardes...). Hi ha també molts elements recuperats d'antigues masies i cases abandonades.</p>
+		<img src="http://mw2.google.com/mw-panoramio/photos/medium/35283466.jpg" alt="" height="350">
+		<img src="http://mw2.google.com/mw-panoramio/photos/medium/65130092.jpg" alt="" style="position: absolute; right: 0;" height="350">
+		<p id="parrafo2">El conjunt, a l'estil del Poble Espanyol, ha estat qualificat sovint com a pastitxo i desacreditat des del punt de vista arquitectònic. Tanmateix, constitueix un lloc de gran interès turístic, agradable i sorprenent, força més interessant que la major part d'urbanitzacions convencionals que envaeixen la costa catalana.</p><hr>
+		<h1 id="mapa">Mapa de Roc de Sant Gaieta</h1>
+		<div id="lienzoMapa"></div><hr>
+		<div id="pieDePagina"><p>Per a més informació: <a href="http://www.poblesdecatalunya.cat/element.php?e=2638">www.poblesdecatalunya.cat</a></p></div>
+	</div>
+</body>
+</html>
