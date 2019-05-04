@@ -7,10 +7,15 @@
     margin-left: -100vw;
     width: 50%;
     height: 100vh;
-    background-color: var(--second-color);
     overflow-y: auto;
     transition:margin-left .3s ease;
     &.is-active{margin-left: 0;}
+        width: 30%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        background-color: var(--second-color);
+
     @include media-queries(medium){
         margin-left: 0;
         padding-top: 0;
@@ -18,6 +23,7 @@
         width: 100%;
         height: auto;
         display:grid;
+        background-color: var(--three-color);
         grid-template-areas:
         "logo title menu";
         grid-template-columns: var(--header-height) 1fr 1fr;

@@ -19,13 +19,27 @@ html {
   body { overflow-x: hidden; }
   
   a {
-    font-weight: bold;
+    font-weight: var(--font-weight-300);
     text-decoration: none;
     color: var(--link-color);
     transition: all .3s ease-out;
   
+  @include media-queries(small) {
+    a {
+      font-weight: var(--font-weight-300);
+      text-decoration: none;
+      color: var(--link-color);
+      transition: all .3s ease-out;
+    
+      &:hover { color: var(--link-hover-color); }
+  
+    }
+ 
+  }
+  @include media-queries(large) {
     &:hover { color: var(--link-hover-color); }
   }
+}
   
   img {
     max-width: 100%;

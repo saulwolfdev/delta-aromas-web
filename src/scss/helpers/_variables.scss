@@ -1,23 +1,29 @@
 /* ********** Custom Properties ********** */
 :root {
-    --main-font: 'Raleway';
+    --main-font: 'Roboto', sans-serif;
     --alternate-font: sans-serif;
     --font-size: 16px;
+    --font-weight-300:100;
+    --font-weight-400:400; 
+    --font-weight-500:500; 
+    --font-weight-700:700;  
     --line-height: 1.6;
-  
     --main-color: #FFF;
+    --color-hover:#6f007b;
+    --color-admin:#e4e4e4;
     --main-modal-color: rgb(255, 255, 255, .75);
     --second-color: #000;
+    --three-color:#fbfbfb;
     --second-modal-color: rgba(0, 0, 0, .75);
-    --alternate-color: rgb(0, 51, 218);
-    --alternate-modal-color: rgb(57, 181, 74, .75);
+    --alternate-color: rgb(190, 0, 143);
+    --alternate-modal-color: rgba(68, 0, 95, 0.75);
   
     --bg-color: var(--main-color);
     --bg-modal-color: var(--main-modal-color);
     --bg-alternate-color: #999;
     --bg-alternate-modal-color: rgba(153, 153, 153, .75);
     --border-color: #DDD;
-  
+
     --text-color: #242424;
     --title-color: #333;
   
@@ -25,7 +31,7 @@
     --link-hover-color: var(--alternate-modal-color);
   
     --max-width: 1200px;
-    --header-height: 5rem;
+    --header-height: 4rem;
   
     --logo-width: 4rem;
     --logo-height: 4rem;

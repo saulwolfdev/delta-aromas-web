@@ -6,14 +6,13 @@
     left: var(--logo-spacing);
     padding: var(--logo-spacing);
     width: var(--logo-width);
-    height: var(--logo-height);
-    border-radius: 50%;
-    background-color: var(--alternate-color);
-  
+    height: var(--logo-height);  
     @include media-queries(medium){
       position: static;
       width: var(--header-height);
       height: var(--header-height);
       grid-area: logo;
+      background-color: transparent;
+      border-radius: 0;
     }
   }

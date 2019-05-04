@@ -1,10 +1,9 @@
 .menu{
-    margin-bottom: 2rem;
-    
+    margin-bottom: 2rem;    
     text-align: right;
-    font-size: 5vw;
+
     @include media-queries(medium){
-        font-size: 1.5rem;
+        font-size:1.2vw;
         grid-area: menu;
         display: flex;
         justify-content: flex-end;
@@ -27,6 +26,9 @@
         }
     }
     li{list-style: none;}
+    .admin{
+        color:var(--color-admin);
+    }
     a{
         padding-right: .5rem;
         display: block;
@@ -35,9 +37,10 @@
                 background-color: var(--alternate-color);
                 @include media-queries(medium){
                     background-color: transparent;
+                    color:var(--color-hover);
                 }
                 @include media-queries(large){
-                    background-color: var(--alternate-color);
+                    background-color: transparent;
                 }
             }
 
