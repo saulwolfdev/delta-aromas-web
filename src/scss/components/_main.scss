@@ -16,9 +16,9 @@
       padding-top: calc(var(--header-height) + 2rem);
     }
   
-    @include media-queries(large) {
-      padding: 1rem;
-      margin-left: 30%;
-      width: 70%;
-    }
+    // @include media-queries(large) {
+    //   padding: 1rem;
+    //   margin-left: 30%;
+    //   width: 70%;
+    // }
   }

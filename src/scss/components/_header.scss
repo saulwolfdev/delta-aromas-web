@@ -19,20 +19,19 @@
         height: auto;
         display:grid;
         grid-template-areas:
-        "logo title menu"
-        "logo title social";
-        grid-template-columns: var(--header-height) 1fr 2fr;
-        grid-template-rows: repeat(2,calc(var(--header-height)/2));
+        "logo title menu";
+        grid-template-columns: var(--header-height) 1fr 1fr;
+        // grid-template-rows: repeat(2,calc(var(--header-height)/2));
         grid-gap: 1vw;
     }
-    @include media-queries(large){
-        position: fixed;
-        padding: 1rem;
-        width: 30%;
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-    }
+    // @include media-queries(large){
+    //     position: fixed;
+    //     padding: 1rem;
+    //     width: 30%;
+    //     height: 100vh;
+    //     display: flex;
+    //     flex-direction: column;
+    // }
 
     &-btn{
         position: fixed;
