@@ -10,6 +10,7 @@ import showPhotos from "./show_photos";
 import deletePhotos from "./delete_Photo";
 
 import tplHome from "../html/Home.tpl.html";
+import sliderMain from "../html/sliderMain.tpl.html";
 import tplAbout from "../html/About.tpl.html";
 import tplContant from "../html/Contact.tpl.html";
 import tplAdmin from "../html/Admin.tpl.html";
@@ -17,13 +18,13 @@ import tplAdminAuthentication from "../html/AdminAuthentication.tpl.html";
 import aboutImg1 from "../img/about.jpg";
 import aboutImg2 from "../img/about1.jpg";
 
-
-
-
-const routes=()=>{ 
+const routes=()=>{
+    const slider=document.querySelector(".Slider")
     const data =document,
     main=data.querySelector(".Main")
     data.addEventListener("DOMContentLoaded",e=>{
+        e.preventDefault()
+        slider.innerHTML=sliderMain;
         main.innerHTML=tplHome;
         showPhotos()
     })
@@ -32,10 +33,12 @@ const routes=()=>{
             e.preventDefault()
         }
         if(e.target.matches(".home")){
+            slider.innerHTML=sliderMain;
             main.innerHTML=tplHome
             showPhotos()
         }
         else if(e.target.matches(".about")){
+            slider.style.display="none";
             main.innerHTML=tplAbout
             data.querySelector(".About-header").innerHTML=`
             <img src="${aboutImg1}">
@@ -43,9 +46,11 @@ const routes=()=>{
             `            
         }
         else if(e.target.matches(".contact")){
+            slider.style.display="none";
             main.innerHTML=tplContant
         }
         else if(e.target.matches(".admin")){
+            slider.style.display="none";
             firebase.auth().onIdTokenChanged(user=>{
                 if(user){
                     main.innerHTML=tplAdminAuthentication

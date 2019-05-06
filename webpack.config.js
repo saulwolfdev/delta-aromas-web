@@ -2,6 +2,8 @@ const HtmlWebpackPlugin = require("html-webpack-plugin"),
   MiniCssExtractPlugin = require("mini-css-extract-plugin"),
   CleanWebpackPlugin = require("clean-webpack-plugin"),
   autoprefixer = require("autoprefixer")
+  const webpack = require('webpack');
+const path = require('path');
 
 
 module.exports = {
@@ -20,7 +22,8 @@ module.exports = {
         use: {
           loader: "babel-loader"
         }
-      },{
+      },
+      {
         test:/\.tpl.html$/,
         use:"es6-template-string"
       },
