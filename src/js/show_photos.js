@@ -6,13 +6,20 @@ import "./configuration"
 
 function figureTemplate(key,{uid,title,comments,category,photo}){
     return`
-    <img src="${photo}" alt="${title}">
-    <figcaption>
-        <span>${title}</span>
-        <p>${comments}</p>
-        <P>${category}</p>
-        <i class="fas fa-trash" data-id="${key}" data-photo="${photo}"></i>
-    </figcaption>
+
+    <div class="item">
+        <div class="item-image">
+          <img class="item-img" src="${photo}" alt="${title}">
+        </div>
+        <figcaption class="item-text">
+          <div class="item-text-wrap">
+            <p class="item-text-category">${category}</p>
+            <h2 class="item-text-title">${title}</h2>
+            <span class="comment">${comments}</span>
+            <i class="fas fa-trash" data-id="${key}" data-photo="${photo}"></i>
+          </div>
+        </figcaption>
+      </div>
     `
 }
 
