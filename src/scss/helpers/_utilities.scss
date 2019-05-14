@@ -67,14 +67,27 @@
        }
    } 
 }
-
+.section-titles{
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.section-title{
+  font-family: $roboto-sans;
+  font-size: 49px;
+  font-weight: 300;
+}
+.section-description{
+  font-family: $roboto-sans;
+  text-align: justify;
+  font-size: 17px;}
 .center-block{
     margin-left:auto;
     margin-right: auto;
 }
 .text{
 text-align: justify;
-font-size: 14px;
+font-size: 15px;
 font-family: $roboto-sans;  
 }
 @for $i from 1 through 20 {
@@ -97,6 +110,11 @@ font-family: $roboto-sans;
   margin-top: 15px;
   padding: 5px;
     &-title{
+      font-weight: 300;
+      color:#fff;
+      font-size: 15px;
+    }
+    &-year{
       font-weight: 300;
       color:#fff;
       font-size: 15px;

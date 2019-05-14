@@ -7,8 +7,11 @@
     margin-right: auto;
     flex-wrap: wrap;
 }
-
+.main-banner-content{
+    text-align: center;
+}
 .main-banner{
+    text-align: center;
     --padding:2rem 1rem 3rem;
     --logo-height:4rem;
     @include media-queries(large){
@@ -29,6 +32,12 @@
         display: block;
         margin:  0 auto .5rem;
     }
+    &__title{
+        font-family: "Roboto",sans-serif;
+        font-size: 49px;
+        font-weight: 300;
+        text-shadow: 1px 1px 4px rgba(0,0,0,0.43);
+    }
     &__banner{
         position: absolute;
         top: 0;
@@ -39,7 +48,16 @@
         object-position: center;
         // opacity: .1;
     }
+    &__description{
+    font-size: 23px;
+    font-family: "Roboto",sans-serif;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.43);
+    }
 
 }
-
+.main-banner-title{
+    font-family: "Roboto",sans-serif;
+    font-size: 49px;
+    font-weight: 300;
+}
 
