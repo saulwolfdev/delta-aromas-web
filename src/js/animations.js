@@ -10,3 +10,5 @@ const animationText=()=>{
     });
     }
     export default animationText;
+
+

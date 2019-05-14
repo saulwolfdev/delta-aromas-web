@@ -1,0 +1,29 @@
+.l-container{
+    max-width: $max-width;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    flex-wrap: wrap;
+}
+
+.center-block{
+    margin-left:auto;
+    margin-right: auto;
+}
+.center-text{
+text-align: center;   
+}
+@for $i from 1 through 20 {
+    .small-#{$i*5}{
+        width: #{$i*5%};
+    }
+}
+@include media-queries(large){
+    @for $i from 1 through 20 {
+        .large-#{$i*5}{
+            width: #{$i*5%};
+        }
+    }
+} 

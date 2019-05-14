@@ -105,3 +105,51 @@
   .comment{
 font-size: .6vw;
   }
+
+
+.main-about{
+  display: grid;
+  margin-top: 35px;
+  grid-template-columns: repeat(3, minmax(320px, 1fr));
+  box-shadow: 0 5px 10px 0 rgba(0,0,0,0.3);
+  grid-gap: 1rem;
+  border-radius: .3vw;
+  max-width: var(--max-width);
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #fff;
+}
+.card-about{
+  &__img img{
+    width: 50%;
+    margin: auto;
+    display: block;
+  }
+  &__content{
+      padding: 1rem;
+      background: #fff;
+  }
+  &__title{
+    font-family:$roboto-sans;
+    font-weight: 300;
+    font-size: 22px;
+  }
+  &__subtitle{
+    font-family:$roboto-sans;
+      margin-top: .1rem;
+      margin-bottom: .5rem;
+      opacity: .6;
+      font-weight: 400;
+      font-size: 14px;
+      text-align: justify;
+  }
+  &__footer{
+    font-family:$roboto-sans;
+      border-top:1px solid var(--color-border);
+      margin-top:1rem;
+      padding-top: 1rem;
+      display:flex;
+      align-items: center;
+      justify-content: space-between;
+  }
+}
