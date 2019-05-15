@@ -50,6 +50,7 @@
     "compass": "^0.1.1",
     "firebase": "^5.10.1",
     "imagemin": "^6.1.0",
+    "rellax": "^1.9.1",
     "swiper": "^4.5.0",
     "update": "^0.7.4",
     "uuid": "^3.3.2"

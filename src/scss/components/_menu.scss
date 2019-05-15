@@ -1,7 +1,12 @@
+
 .menu{
     margin-bottom: 2rem;    
     text-align: right;
-
+    margin-bottom: 2rem;
+    @include media-queries(small){
+        font-size:2vw;
+        color:#fff;
+    }
     @include media-queries(medium){
         font-size:1.2vw;
         grid-area: menu;
@@ -35,6 +40,23 @@
             &:hover{
                 color: var(--main-color);
                 background-color: var(--alternate-color);
+                @include media-queries(extra-small){
+                    background-color: transparent;
+                    color:#fff;
+                    color:var(--color-hover);
+                    font-size: 24px;
+                }
+                @include media-queries(small){
+                    background-color: transparent;
+                    color:#fff;
+                    color:var(--color-hover);
+                    font-size: 24px;
+                }
+                @include media-queries(medium){
+                    background-color: transparent;
+                    color:#fff;
+                    color:var(--color-hover);
+                }
                 @include media-queries(medium){
                     background-color: transparent;
                     color:var(--color-hover);
@@ -44,5 +66,15 @@
                 }
             }
 
+    }
+}
+
+@media (max-width: 600px){
+    .menu a {
+        padding-right: .5rem;
+        display: block;
+        font-size: 33px;
+        color: #fff;
+        cursor: pointer;
     }
 }

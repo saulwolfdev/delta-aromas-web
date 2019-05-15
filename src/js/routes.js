@@ -3,6 +3,7 @@ import "firebase/auth";
 import "firebase/database";
 import "firebase/storage";
 import "./configuration";
+import "rellax";
 
 import { signIn, signOut} from "./authentication";
 import savePhoto from "./save_photos";

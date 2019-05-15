@@ -10,8 +10,7 @@
       width .3s ease;
   
     &.is-active {
-      margin-left: 50%;
-      width: 50%;
+      width: 100%;
     }
   
     @include media-queries(medium) {

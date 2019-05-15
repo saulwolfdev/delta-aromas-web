@@ -10,11 +10,12 @@
     overflow-y: auto;
     transition:margin-left .3s ease;
     &.is-active{margin-left: 0;}
-        width: 30%;
+        width: 60%;
         height: 100vh;
         display: flex;
+        z-index: 10000;
         flex-direction: column;
-        background-color: var(--second-color);
+        background-color:#000000c7;
 
     @include media-queries(medium){
         margin-left: 0;

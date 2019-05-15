@@ -11,8 +11,9 @@
     & > * { flex: 1 1 200px; }
   }
   .u-message {
+    font-family: $roboto-sans;
     font-size: 4vw;
-    font-weight: bold;
+    font-weight:300;
     text-align: center;
   
     @include media-queries(medium) { font-size: 1.5rem; }
@@ -25,8 +26,12 @@
     padding: .5rem 1rem;
     outline: 0;
     border: 0;
-    border-radius: .25rem;
-    background-color: var(--alternate-modal-color);
+    font-family: $roboto-sans;
+    border-radius:50px;
+    background-color: rgba(183, 0, 255, 0.75);
+    font-size: 23px;
+    color: #fff;
+    font-weight: 300;
     cursor: pointer;
     transition: all .3s ease;
   

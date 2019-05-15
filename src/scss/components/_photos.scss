@@ -14,18 +14,5 @@
       flex-direction: column;
       max-width: var(--max-width);
     }
-    
-    // figcaption {
-    //   padding: .5rem;
-    //   display: flex;
-    //   justify-content: space-between;
-    //   align-items: center;
-    //   font-size: 4vw;
-    //   color: var(--alternate-color);
-    //   background-color: var(--second-color);
-  
-    //   @include media-queries(medium) { font-size: 1.5rem; }
-    // }
-  
     .fa-trash { cursor: pointer; }
   }
