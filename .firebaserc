@@ -1,5 +1,7 @@
 {
   "projects": {
-    "default": "delta-aromas-web-fb31b"
+    "default": "delta-aromas-web-fb31b",
+    "Y": "delta-aromas-web-17bf3",
+    "deltaaromas": "delta-aromas-web-17bf3"
   }
 }

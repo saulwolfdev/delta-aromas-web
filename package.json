@@ -49,6 +49,8 @@
     "animate.css": "^3.7.0",
     "compass": "^0.1.1",
     "firebase": "^5.10.1",
+    "firebase-admin": "^8.9.2",
+    "firebase-functions": "^3.3.0",
     "imagemin": "^6.1.0",
     "rellax": "^1.9.1",
     "swiper": "^4.5.0",
