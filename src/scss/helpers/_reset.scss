@@ -19,14 +19,14 @@ html {
   body { overflow-x: hidden; }
   
   a {
-    font-weight: var(--font-weight-300);
+    font-weight: var(--font-weight-400);
     text-decoration: none;
     color: var(--link-color);
     transition: all .3s ease-out;
   
   @include media-queries(small) {
     a {
-      font-weight: var(--font-weight-300);
+      font-weight: var(--font-weight-400);
       text-decoration: none;
       color: var(--link-color);
       transition: all .3s ease-out;
